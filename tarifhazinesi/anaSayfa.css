@@ -1,0 +1,109 @@
+body{
+    font-family: Arial, sans-serif;
+    background-image: url(yemek3.jpg);
+    margin: 0;
+    padding: 0;
+}
+header
+{
+    background: linear-gradient(to right, #2e1c2d, #ce08c4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 28px 100px;
+    z-index: 100000;
+}
+
+header.sticky
+{
+    padding: 15px 100px;
+    background: rgba(204, 0, 255, 0.582);
+}
+
+header img
+{
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    margin-left: -20px;
+}
+
+header .logo
+{
+    position: relative;
+    font-weight: 700;
+    color:rgb(255, 0, 212);
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+header ul
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li
+{
+    position: relative;
+    list-style: none;
+    transition: 0.6s;
+}
+
+header ul li a
+{
+    position: relative;
+    padding: 6px 13px;
+    text-decoration: none;
+    color: #000;
+    letter-spacing: 2px;
+    font-weight: 50px;
+    transition: 0.6s;
+}
+
+header ul li a.active
+{
+    background: linear-gradient(to right, #2e1c2d, #ce08c4 );
+    color: white;
+    font-size: 20px;
+    margin-right:120px;
+    margin-left:5px ;
+    margin-top:-3px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+header ul li a.none:hover
+{
+    background: linear-gradient(to right, #2e1c2d, #ce08c4 );
+    color: white;
+    font-size: 20px;
+    margin-right:5px;
+    margin-left:5px ;
+    margin-top:-3px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.masa{
+    margin-left: 235px;
+    display: block;
+}
+.masa::after {
+    content: "Boş Masaya Lezzet Dokunuşu: Malzemeni Gir, Tariflerle Mutfakta Harikalar Yarat!";
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    background: linear-gradient(to right, #2e1c2d, #ce08c4); /* Beyaz kutu arka planı */
+    color: #fcfbfb; /* Metin rengi */
+    font-size: 18px;
+    text-align: center;
+    border-radius: 8px; /* Kutu köşelerini yumuşat */
+}

@@ -1,0 +1,190 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(yemek3.jpg);
+}
+
+header {
+    position: fixed; /* Header sabit bir konumda tutuluyor */
+    top: 0; /* Header'ın üst kenarı ekranın üst kenarına sabitlenir */
+    left: 0; /* Header'ın sol kenarı ekranın sol kenarına sabitlenir */
+    width: 100%; /* Header ekranın genişliğini kaplar */
+    display: flex;
+    justify-content: space-between; /* İçeriği yatay düzende sağa ve sola yay */
+    align-items: center; 
+    transition: 0.6s; /* Header'ın stil değişikliklerinde animasyon süresi belirlenir */
+    padding: 20px 90px; 
+    z-index: 10; /* Header'ın diğer elementlerden üstte olmasını sağlar */
+    background:linear-gradient(to right, #2e1c2dd3, #ce08c4);
+}
+
+/* Scroll yapıldığında eklenen "sticky" sınıfının stilleri */
+header.sticky {
+    padding: 15px 100px; /* Header sabitlendiğinde iç kenar boşluğu değiştirilir */
+    background: linear-gradient(to right, #2e1c2d, #ce08c4); /* Header arka plan rengi değiştirilir */
+}
+
+/* Header içindeki logo stilleri */
+header img {
+    width: 40px;
+    height: 40px; 
+    margin-right: 20px;
+    margin-left: -20px; 
+}
+
+/* Header içindeki site adı stilleri */
+header .logo {
+    position: relative; /* Göreceli konum belirlenir */
+    font-weight: 700; /* Kalınlık derecesi belirlenir */
+    color: rgb(255, 0, 212); 
+    text-decoration: none; /* Metin altı çizgisi kaldırılır */
+    font-size: 2em; /* Metin font büyüklüğü belirlenir */
+    text-transform: uppercase; /* Metin büyük harfe dönüştürülür */
+}
+
+/* Header içindeki menü stilleri */
+header ul {
+    position: relative; /* Göreceli konum belirlenir */
+    display: flex;
+    justify-content: center; /* İçeriği yatay düzende ortala */
+    align-items: center; /* İçeriği dikey düzende ortala */
+}
+
+/* Header içindeki menü elemanlarına ait genel stiller */
+header ul li {
+    list-style: none; 
+    transition: 0.6s; 
+}
+
+/* Header içindeki menü bağlantılarına ait genel stiller */
+header ul li a {
+    padding: 6px 13px; 
+    text-decoration: none; /* Bağlantı altı çizgisi kaldırılır */
+    color: #000; 
+    letter-spacing: 2px; /* Harf aralığı belirlenir */
+    font-weight: 500; 
+    transition: 0.6s;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header ul li a.active,
+header ul li a.none:hover {
+    background: linear-gradient(to right, #2e1c2d, #ce08c4);
+    color: white;
+    font-size: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: -3px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+header ul li a#gir {
+    margin-right: 100px;
+}
+nav{
+    margin-top: 85px;
+}
+
+h3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.kolon{
+    display: flex; 
+    justify-content: space-between; /* Elemanlar arasında boşluk bırak */
+    align-items: flex-start; /* Elemanları dikey düzende üstte hizala */
+}
+
+.kutu {
+    max-width: 300px; /* Kutu genişliğini yüzde olarak ayarla */
+    width: 100%;
+    display: inline-block;
+    background: #f1f1f1;
+    border: solid 3px #ce08c4;
+    position: relative;
+    margin-top: 95px;
+    margin-right: 20px; /*sağa dayalı başlatma */
+    margin-bottom: 20px;
+    padding: 20px; 
+    box-sizing: border-box; /* Padding ve border'ı genişliğe dahil etme */    
+  
+}
+h4{
+    color:rgb(255, 0, 212);
+}
+.yazi{
+    max-width: 900px; 
+    margin: 150px auto 0; 
+    background: linear-gradient(to right, #2e1c2dbe, #ce08c4b6);
+    color: #f1f1f1;
+    padding: 10px;
+    padding-left: 20px;
+    box-sizing: border-box;
+
+}
+
+
+
+
+.tercih {
+    max-height: 400px; /* İçeriğin maksimum yüksekliği */
+    overflow-y: auto; /* Dikey scroll */
+    padding: 10px;
+}
+/* İsteğe bağlı: Scroll çubuğu tasarımı */
+::-webkit-scrollbar {
+    width: 8px; /* Kaydırma çubuğu genişliği */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ce08c4; /* Başparmak (thumb) arka plan rengi */
+    border-radius: 4px; /*(yuvarlaklık) */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* arka plan rengi */
+}
+#tarifBut {
+    position: absolute; 
+    bottom: 10px; 
+    right: 10px; 
+    padding: 10px 16px;
+    background-color: #2e1c2d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#tarifBut:hover {
+    background-color: #ce08c4;
+}
+
+        /* Tarif kutularının stilini düzenle */
+  
+        .yemek-kutu {
+            width: 800px;
+            margin: 20px;
+            text-align: left;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            
+        }
+
+        .yemek-kutu img {
+            width: 125px;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
